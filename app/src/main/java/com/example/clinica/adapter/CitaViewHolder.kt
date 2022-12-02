@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.clinica.CitaActivity
+import com.example.clinica.EditarCitaActivity
 import com.example.clinica.MenuActivity
 import com.example.clinica.R
 import com.example.clinica.config.AppDatabase
@@ -29,7 +30,7 @@ class CitaViewHolder (view: View) : RecyclerView.ViewHolder(view){
             var cit=database.citas().get(cita)
             //Log.d("message", cit.toString())
 
-            val intent = Intent(cn, MenuActivity::class.java).apply {
+            val intent = Intent(cn, EditarCitaActivity::class.java).apply {
                 putExtra("key",cit)
             }
 
