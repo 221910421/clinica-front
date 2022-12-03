@@ -13,6 +13,20 @@
         android:theme="@style/Theme.Clinica"
         tools:targetApi="31">
         <activity
+            android:name=".CrearMedicamento"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ApiActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".EditarDoctorActivity"
             android:exported="false">
             <meta-data

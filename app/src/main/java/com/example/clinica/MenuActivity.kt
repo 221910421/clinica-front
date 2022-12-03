@@ -24,5 +24,10 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnMedicamentos.setOnClickListener {
+            val intent = Intent(this, ApiActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
