@@ -20,7 +20,7 @@ class CrearMedicamento : AppCompatActivity() {
         binding.btnGuardar.setOnClickListener {
             val queue = Volley.newRequestQueue(this)
             val sr: StringRequest =
-                object : StringRequest(Method.POST, "https://127.0.0.1/api/medicamentos",
+                object : StringRequest(Method.POST, "https://clinicasanmiguel.com.mx/api/medicamentos",
                     Response.Listener { response ->
                         Log.d("message", response)
                     },
@@ -38,7 +38,7 @@ class CrearMedicamento : AppCompatActivity() {
                     }
                 }
             queue.add(sr)
-            val intent = Intent(this, ApiActivity::class.java)
+            val intent = Intent(this, MedicamentoActivity::class.java)
             startActivity(intent)
         }
     }

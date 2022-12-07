@@ -28,7 +28,7 @@ class EditarMedicamentoActivity : AppCompatActivity() {
 
             val queue = Volley.newRequestQueue(this)
             val sr: StringRequest = object : StringRequest(
-                Method.PUT, "http://127.0.0.1:8000",
+                Method.PUT, "https://clinicasanmiguel.com.mx/api/medicamentos/",
                 Response.Listener { response ->
                     Log.d("message", response)
                 },

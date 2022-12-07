@@ -36,7 +36,7 @@ class MedicamentoViewHolder(view : View) : RecyclerView.ViewHolder(view) {
         btnEditar.setOnClickListener {
             // Instantiate the RequestQueue.
             val queue = Volley.newRequestQueue(cn)
-            val url = "http://127.0.0.1:8000/api/medicamentos/"+medicamento
+            val url = "https://clinicasanmiguel.com.mx/api/medicamentos/"+medicamento
 
             var Med : MedicamentosModel
             val stringRequest = StringRequest(
@@ -68,7 +68,7 @@ class MedicamentoViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
             val queue = Volley.newRequestQueue(cn)
             val sr: StringRequest = object : StringRequest(
-                Method.DELETE, "http://127.0.0.1:8000/api/medicamentos/"+id,
+                Method.DELETE, "https://clinicasanmiguel.com.mx/api/medicamentos/"+id,
                 Response.Listener { response ->
                     Log.d("message", response)
                 },
