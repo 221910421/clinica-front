@@ -28,7 +28,7 @@ class EditarMedicamentoActivity : AppCompatActivity() {
 
             val queue = Volley.newRequestQueue(this)
             val sr: StringRequest = object : StringRequest(
-                Method.PUT, "https://clinicasanmiguel.com.mx/api/medicamentos/",
+                Method.PUT, "https://clinicasanmiguel.com.mx/api/medicamentos/"+Med.id.toString()+"?"+"nombre="+binding.txtNombre.text.toString()+"&clasificacion="+binding.txtClasificacion.text.toString()+"&presentacion="+binding.txtPresentacion.text.toString()+"&dosis="+binding.txtDosis.text.toString(),
                 Response.Listener { response ->
                     Log.d("message", response)
                 },
@@ -42,7 +42,7 @@ class EditarMedicamentoActivity : AppCompatActivity() {
                     params["clasificacion"] =  binding.txtClasificacion.text.toString()
                     params["presentacion"] = binding.txtPresentacion.text.toString()
                     params["dosis"] = binding.txtDosis.text.toString()
-                    //Log.d("message", params.toString())
+                    Log.d("message", params.toString())
                     return params
                 }
 

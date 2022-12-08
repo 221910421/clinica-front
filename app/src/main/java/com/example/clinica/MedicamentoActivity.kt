@@ -34,7 +34,6 @@ class MedicamentoActivity : AppCompatActivity() {
         // Instantiate the RequestQueue.
         val queue = Volley.newRequestQueue(this)
         val url = "https://clinicasanmiguel.com.mx/api/medicamentos"
-
         var listaMedicamento = listOf<MedicamentosModel>()
         val stringRequest = StringRequest(
             Request.Method.GET, url,
